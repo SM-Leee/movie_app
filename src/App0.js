@@ -37,11 +37,12 @@ const movies = [{
 
 class App extends Component {
   componentWillMount() {
+    // request API 호출
     console.log('componentWillMount() called!!');
   }
   
   componentDidMount(){
-    // request API 호출
+    // request done
     console.log('componentDidMount() called!!');
   }
   render() {
