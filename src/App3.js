@@ -37,11 +37,10 @@ class App1 extends Component {
     }
     render() {
         console.log('render() called!!');
+        const {movies} = this.state;
         return (
-            <div className="App">
-                {
-                    (this.state.movies == null) ? 'loading' : this._renderMovies()
-                }
+            <div className={ movies ? 'App' : 'App--loading' }>
+                { movies ? this._renderMovies() : "loading" }
             </div>
         );
     }
